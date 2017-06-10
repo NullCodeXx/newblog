@@ -31,7 +31,9 @@
     // il faut mettre les droit de l'ecriture par le biais du terminal avec la commande
     // chmod O+w ou a+drw et sans oubnlier le "." pour dire que c'est le dossier courant.
     //On félicite l'utilisateur.
-    echo "Félicitation: " . "Super, tu as crée et poster un fichier avec son contenus propre !"
+    echo "Félicitation: " . "Super, tu as crée et poster un fichier avec son contenus propre !";
+    //retourne la page sur index.php
+    header("location: index.php");
     ?>
 </body>
 </html>

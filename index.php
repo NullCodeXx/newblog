@@ -1,7 +1,7 @@
 <!--Ce que qu'on veut faire c'est lister les article fichier etc..-->
 <?php
     // On recupere
-    $tableau = scandir("utilisateur");
+    $tableau = scandir("utilisateur", SCANDIR_SORT_NONE); //Affiche le text par ordre.
     // On veut filtrer nos fichier les information pour mieux les utiliser 
     // et recupere que nos fichier dans un tableau appeler post.
     // $post = array_filter($array, is_file) est egal a la boucle foreach.
@@ -55,6 +55,12 @@
             <h2><?php echo $file; ?></h2>
             <p><?php echo $content; ?></p>
         </article>
+
+    <!--On crée un button pour supprimer -->
+    <form action="delete.php" method="POST">
+        <input type="hidden" name="filename" value="<?php echo $file; ?>">
+        <input type="submit" value="delete">
+    </form>
     <?php } ?>
 
 
